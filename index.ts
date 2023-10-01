@@ -45,8 +45,18 @@ const studentThree = {
   name: 'Jan',
   details: {
     id: 1,
-    age: true,
+    age: 23,
   }, 
 } satisfies Person;
 
 studentThree.name.toLowerCase();
+
+type RGB = [number, number, number];
+type Color = { value: string | RGB }
+
+const myFavouriteColor = { value: 'red' } satisfies Color;
+
+myFavouriteColor.value.toUpperCase()
+
+console.log(myFavouriteColor);
+
